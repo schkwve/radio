@@ -1,4 +1,4 @@
-[Klikněte zde pro zobrazení české verze](README-CS.md)
+[Click here to read the English version](README.md)
 
 # FM Rádio (ArduRadio v1.0)
 
