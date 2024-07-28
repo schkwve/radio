@@ -8,13 +8,13 @@ struct radio_station {
 	RADIO_FREQ freq;
 };
 
-// predem nadefinovane stanice
-// frekvence se pise bez desetinnych carek:
+// predefined stations list
+// NOTE: Frequencies are always written with two decimal places *without* a point:
 //   - 89.8 FM -> 8980
 //   - 103.7 FM -> 10370
 
 // clang-format off
-static struct radio_station stanice[] = {
+static struct radio_station predefined_stations[] = {
 	{
 		"Radio CAS Rock",
 		8950 // 89.8 FM
