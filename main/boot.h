@@ -1,5 +1,5 @@
-#ifndef _ANIM_H
-#define _ANIM_H_
+#ifndef _BOOT_H
+#define _BOOT_H_
 
 // clang-format off
 static byte chr[3][8][8] = {
@@ -41,41 +41,46 @@ static int x = 0;
 
 static void show_bootanim()
 {
-	lcd.clear();
-	for (int i = 0; i < 6; i++) {
-		if (x > 15)
-			x = -4;
+    lcd.clear();
+    for (int i = 0; i < 6; i++)
+    {
+        if (x > 15)
+            x = -4;
 
-		for (int f = 0; f < 3; f++) {
-			lcd.clear();
+        for (int f = 0; f < 3; f++)
+        {
+            lcd.clear();
 
-			for (int i = 0; i < 8; i++) {
-				lcd.createChar(i, chr[f][i]);
-			}
+            for (int i = 0; i < 8; i++)
+            {
+                lcd.createChar(i, chr[f][i]);
+            }
 
-			for (int c = 0; c < 4; c++) {
-				int xc = x + c;
+            for (int c = 0; c < 4; c++)
+            {
+                int xc = x + c;
 
-				if ((xc >= 0) && (xc < 16)) {
-					lcd.setCursor(x + c, 0);
-					lcd.write(byte(c));
-					lcd.setCursor(x + c, 1);
-					lcd.write(byte(c + 4));
-				}
-			}
+                if ((xc >= 0) && (xc < 16))
+                {
+                    lcd.setCursor(x + c, 0);
+                    lcd.write(byte(c));
+                    lcd.setCursor(x + c, 1);
+                    lcd.write(byte(c + 4));
+                }
+            }
 
-			x++;
-			delay(300);
-		}
-	}
+            x++;
+            delay(300);
+        }
+    }
 
-	lcd.clear();
-	lcd.setCursor(1, 0);
-	lcd.print("Super Radio");
-	delay(500);
-	lcd.setCursor(2, 1);
-	lcd.print("Jozef Nagy");
-	delay(2000);
+    lcd.clear();
+    lcd.setCursor(1, 0);
+    lcd.print("Super Radio");
+    delay(500);
+    lcd.setCursor(2, 1);
+    lcd.print("Jozef Nagy");
+    delay(2000);
 }
 
-#endif /* _ANIM_H */
+#endif /* _BOOT_H */

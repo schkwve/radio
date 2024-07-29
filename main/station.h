@@ -3,9 +3,10 @@
 
 #include <RDA5807M.h>
 
-struct radio_station {
-	const char *name;
-	RADIO_FREQ freq;
+struct radio_station
+{
+    const char *name;
+    RADIO_FREQ freq;
 };
 
 // predefined stations list
