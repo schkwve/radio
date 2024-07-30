@@ -15,6 +15,24 @@ FM Radio made with Arduino UNO.
 - Stereo sound
 - Bass Boost
 
+## Build your own ArduRadio!
+
+### Bill of Materials
+
+- Arduino UNO R3 (or equivalent; see notes)
+- 16x2 LCD I2C Display
+- RRD102 shield (RDA5807M IC)
+- 3x Momentary Pushbutton Switch
+- Wires
+
+### Schematic
+
+![Schematics](docs/schematics.png)
+
+### Notes
+
+- Other Arduinos (ie. Nano) should work as well; for the proper functioning of the radio, you need to have one 3.3V output and one 5V output (RRD102 module **cannot** take 5V as input voltage! Use a voltage regulator if the Arduino of your choice doesn't have a 3.3V output)
+
 ## License
 
 This project is dual licensed.
